@@ -77,7 +77,7 @@ public class Delivery implements IDelivery {
         try{
             listResult = dao.findAll();
         }catch (Exception e){
-
+            System.out.print("Erro ao buscar dados\n");
         }
         return listResult;
     }
@@ -88,7 +88,7 @@ public class Delivery implements IDelivery {
         try{
             del = (Delivery) dao.findById(id);
         }catch (Exception e){
-
+            System.out.print("Erro ao buscar dados\n");
         }
         return del;
     }
@@ -99,7 +99,7 @@ public class Delivery implements IDelivery {
         try{
             listResult = dao.findByStatus(status);
         }catch (Exception e){
-
+            System.out.print("Erro ao buscar dados\n");
         }
         return listResult;
     }
@@ -109,7 +109,7 @@ public class Delivery implements IDelivery {
         try {
         dao.updateStatus(id, status);
         }catch (Exception e){
-
+            System.out.print("Erro ao atualizar dados\n");
         }
 
     }
@@ -118,7 +118,7 @@ public class Delivery implements IDelivery {
         try {
             dao.DeleteD(id);
         }catch (Exception e){
-
+            System.out.print("Erro ao deletar dados\n");
         }
     }
     @Override
